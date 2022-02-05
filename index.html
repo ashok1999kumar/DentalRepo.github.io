@@ -13,6 +13,7 @@
         --btncolor: #16D9D6;
         --btncolortwo: #F9F9F6;
         --input-invalid: red;
+        --border: #0a99ec;
       }
       /*nav style*/
       *{
@@ -55,12 +56,14 @@
       }
       /*teeth*/
       .card{
-        border-radius: 2rem; border: .3rem solid #0a99ec;padding: 3rem;
+        border-radius: 2rem; border: .3rem solid var(--border);padding: 3rem;
       }
       .choose-form-color{color: var(--btncolor);font-size: 2rem;
       }
       .card-icon{
         margin-top:-2rem;margin-left: 5rem; position:absolute; z-index: 1;width: 7rem;
+        border: .3rem solid var(--border);
+        border-radius: 50%;
       }
       /*form video*/
       input.invalid {
@@ -75,7 +78,7 @@
         display: none;
       }
 
-      .btn-next,.btn-prev {background-color: #04AA6D;color: #ffffff;border: none;padding: 1rem 2rem;font-size: 1.5rem;cursor: pointer;
+      .btn-next,.btn-prev {background-color: blue;color: #ffffff;border: none;padding: 1rem 2rem;font-size: 1.5rem;cursor: pointer;
       }
 
       .btn-next,.btn-prev:hover {
@@ -83,7 +86,7 @@
       }
 
       #prevBtn {
-        background-color: #bbbbbb;
+        background-color: var(--btncolortwo);
       }
       #regForm{
         height:29rem;
@@ -157,6 +160,9 @@
        .tripple-icon{
           display: none;
         }
+        .solution{
+          padding-bottom: 2rem;
+        }
       }
       @media screen and (max-width: 768px) {
        .mainLogo{
@@ -223,6 +229,27 @@
       .mobile-nav{
         width: 85%;
         padding: 2rem 2rem;
+      }
+      .hire{
+        font-size: 1.2rem;
+        margin: -1rem;
+      }
+      .solution{
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+      .footer-one{
+        width: 80%;
+      }
+      .footer-two img{
+        width: 4rem;
+        height: 4rem;
+      }
+      .footer-play-store-img{
+        display: none;
+      }
+      .footer-text{
+        font-size: 1rem;
       }
     }
     </style>
@@ -571,10 +598,20 @@
           </div> -->
         </form>   
       </div>  
-      <div class="col-sm-8 col-md-8 col-lg-8">
-          <video class="video-fluid w-100 h-100" autoplay loop controls muted style="pointer-events: none;">
-            <source src="video/video-bg.mp4" type="video/mp4">
-          </video>
+      <div class="col-sm-8 col-md-8 col-lg-8 text-center" style="position: relative;">
+          <div class="">
+              <video class="video-fluid w-100 h-100" autoplay loop controls muted style="pointer-events: none;">
+                <source src="video/video-bg.mp4" type="video/mp4">
+              </video>
+          </div>
+
+          <div class="text-light" style="position: absolute; top: 2rem; left: 1rem;">
+            <h1 class="text-center text-uppercase display-4 fw-bold hire" style="padding: 0rem 7.5rem;">hire temp for your dental offices</h1>
+          </div>
+
+          <div class="text-light" style="position: absolute; bottom: 1rem;">
+            <h1 class="text-center text-uppercase fw-bold solution">we provide solution to post temporary josb to full the requrirements of your dental office</h1>
+          </div>
       </div>    
     </div>
 </section>
@@ -883,8 +920,8 @@
     <div class="row container text-light ">
       <div class="col-sm-7 col-md-7 col-lg-7">
         <div class="mt-5">
-          <img src="images/header-image/MainLogo.png">
-          <div>
+          <img src="images/header-image/MainLogo.png" class="footer-one">
+          <div class="footer-two">
             <img src="images/header-image/Facebook.png" class="m-1">
             <img src="images/header-image/Twitter.png" class="m-1">
             <img src="images/header-image/Youtube.png" class="m-1">
@@ -910,7 +947,7 @@
       </div>  
 
       <!-- start col -->
-      <div class="col-sm-5 col-md-5 col-lg-5 mt-5">
+      <div class="col-sm-5 col-md-5 col-lg-5 mt-5 footer-play-store-img">
         <div class="m-5 py-5" style="display: grid;place-items:center;background: url('images/header-image/RoundedRectangle13.png'); background-repeat: no-repeat; background-size: 100% 100%; ">
           <h3 class="text-center text-capitalize p-4">download our app</h3>
           <img src="images/header-image/Layer17.png" style="width:20rem">
@@ -919,7 +956,7 @@
     </div>
     <!-- copy right -->
   </div>
-  <div class="bg-info fs-3">
+  <div class="bg-info fs-3 footer-text">
       <div class="d-flex justify-content-between p-2 px-5 container">
       <div class="p-2 fw-bold">
         <p>2022 #dentalGram.Inc. All Rights reserved</p>
